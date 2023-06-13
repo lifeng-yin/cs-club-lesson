@@ -1,32 +1,24 @@
 ---
 theme: default
 colorSchema: dark
-# apply any windi css classes to the current slide
 class: 'text-center'
-# https://sli.dev/custom/highlighters.html
 highlighter: prism
-# show line numbers in code blocks
-lineNumbers: false
-# some information about the slides, markdown enabled
-info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
-# persist drawings in exports and build
+lineNumbers: true
+info: false
 drawings:
   persist: false
-# use UnoCSS (experimental)
 css: unocss
+fonts:
+    sans: 'Manrope'
 ---
 
-# Welcome to Slidev
+<h1 class="font-800">DYNAMIC PROGRAMMING</h1>
 
-Presentation slides for developers
+LHSS CS Club Challenge Room - Presented by Li Feng Yin
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
+    Let's begin <carbon:arrow-right class="inline"/>
   </span>
 </div>
 
@@ -46,7 +38,7 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 ---
 
-# What is Slidev?
+# What is Slidev
 
 Slidev is a slides maker and presenter designed for developers, consist of the following features
 
@@ -67,18 +59,6 @@ Read more about [Why Slidev?](https://sli.dev/guide/why)
 You can have `style` tag in markdown to override the style for the current page.
 Learn more: https://sli.dev/guide/syntax#embedded-styles
 -->
-
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
 
 ---
 
