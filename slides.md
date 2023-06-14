@@ -151,6 +151,7 @@ As shown in the previous problem, `climb(4)` can be broken down into two scenari
     <p style="margin-top: 16px">Therefore, the number of ways is 2 + 1 + 2 = 5.</p>
 </div>
 <div>
+
 ```py
 def climb(n):
     # Base cases
@@ -160,21 +161,82 @@ def climb(n):
     # Taking a 1-step and a 2-step,
     # then sum the results
     # Eg. climb(4) = climb(3) + climb(2)
-    return climbStairsRecursive(n - 1) + climbStairsRecursive(n - 2)
+    return climb(n - 1) + climb(n - 2)
 ```
+
 </div>
 </div>
 
 ---
 
 <div grid="~ cols-2 gap-4">
-    <div>
-    However, this solution is not efficient.
-    </div>
-    <div>
-    <img src="/recursioncallstack.png" />
-    </div>
+<div>
+However, this solution is not efficient.
 </div>
+<div>
+<img src="/recursioncallstack.png" />
+</div>
+</div>
+
+---
+
+# Implementation using Dynamic Programming
+
+<div grid="~ cols-2 gap-4">
+<div>
+Instead, we can use a recursive approach to start from the big problem, down to the base case.
+As shown in the previous problem, `climb(4)` can be broken down into two scenarios:
+    <ul>
+        <li style="margin-top: 16px">If a 1-step is taken, there are 3 steps left → <code>climb(3)</code> ways.</li>
+        &nbsp;&nbsp; - Similarily, this can then be broken down into <code>climb(2)</code> and <code>climb(1)</code>`, which is 2 + 1.
+        <li style="margin-top: 16px">If a 2-step is taken, there are 2 steps left → <code>climb(2)</code> ways, which is 2.</li>
+    </ul>
+    <p style="margin-top: 16px">Therefore, the number of ways is 2 + 1 + 2 = 5.</p>
+</div>
+<div>
+
+```py
+# Memo object!
+# Here we store our solutions to subproblems.
+memo = {}
+
+def climb(n):
+    # Get subproblem from memo if solved
+    if n in memo:
+        return memo[n]
+
+    # Base cases
+    if n == 1: return 1
+    if n == 2: return 2
+
+    # Calculate recursively, store inside memo
+    memo[n] = climb(n - 1) + climb(n - 2)
+    # Return calculated subproblem
+    return memo[n]
+```
+
+</div>
+</div>
+
+---
+
+# Naive Recursion Solution
+
+```py
+def count_lists(k, n):
+    if n == k:
+        return 1
+    if n <= 1 or k <= 1:
+        return 0
+    count = 0
+    for i in range(1, n + 1):
+        count += count_lists(k - 1, n - i)
+    return count
+```
+
+---
+
+# 
 
 ---
 
