@@ -78,24 +78,16 @@ layout: image-right
 image: https://source.unsplash.com/collection/94734566/1920x1080
 ---
 
-# Code
+# Example Problem: Climbing Stairs
 
-Use code snippets and get the highlighting directly![^1]
 
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
 
-function updateUser(id: number, update: User) {
-  const user = getUser(id)
-  const newUser = { ...user, ...update }
-  saveUser(id, newUser)
-}
-```
+How many possible ways can you climb to the top of a staircase with `n` steps, provided that you can only climb 1 or 2 steps at a time?
+
+#### Example solution when `n = 8`:
+
+`[1, 2, 1, 1, 2, 1, 1]`
+<p style="font-size: 12px">(please don't do this in real life)</p>
 
 [^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
 
