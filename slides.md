@@ -224,19 +224,47 @@ def climb(n):
 
 ```py
 def pi(n, k, last_element):
+    # Base cases
     if n == k or k == 1:
         return 1
 
     count = 0
+
+    # Loop over all possible values from the last element to the the nth element
     for i in range(last_element, n + 1):
+        # Execute the recursion, with n and k reduced by 1, and the last element as i
+        count += pi(n - 1, k - 1, i)
+    return count
+```
+
+---
+
+# Efficient +
+
+<div grid="~ cols-2 gap-4">
+<div>
+Here, we 
+</div>
+<div>
+
+```py {8,9}
+def pi(n, k, last_element):
+    # Base cases
+    if n == k or k == 1:
+        return 1
+
+    count = 0
+
+    # Loop over all possible values from the last element to the maximum element
+    for i in range(last_element, n // k + 1):
+        # Execute the recursion, with n and k reduced by 1, and the last element as i
         count += pi(n - 1, k - 1, i)
     return count
 
 ```
 
----
-
-# 
+</div>
+</div>
 
 ---
 
