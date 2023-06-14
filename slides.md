@@ -360,4 +360,5 @@ class: text-center
 
 # Thanks for listening
 Github Code: https://github.com/lifeng-yin/cs-club-lesson
+<br>
 Link: https://cs-dp-lesson.netlify.app
