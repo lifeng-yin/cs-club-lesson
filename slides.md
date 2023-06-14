@@ -167,7 +167,14 @@ def climb(n):
 
 ---
 
-However, this solution is not efficient. 
+<div grid="~ cols-2 gap-4">
+    <div>
+    However, this solution is not efficient.
+    </div>
+    <div>
+    <img src="/recursioncallstack.png" />
+    </div>
+</div>
 
 ---
 
