@@ -278,25 +278,41 @@ def pi(n, k, last_element):
 
 <div grid="~ cols-2 gap-4">
 <div>
-# Components
+### Dynamic Programming
+
+- To avoid recalculating the subproblems (`pi(n - 1, k - 1, i)`), we can utilize Dynamic Programming!
+- Memo is a 2D array that stores the count for each problem.
+- Before trying to calculate each subproblem, we can search from the array to see if the subproblem is already calculated.
+- Still use the recursion code from before.
 </div>
 <div>
 
 ```py
+
+# Initialize empty 2D array, filled with 0s, with dimensions (n + 1), (k + 1)
 memo = [[0] * (n + 1) for _ in range(k + 1)]
 
 def pi(n, k, last_element):
-    if memo[n][k][last_element] == 0:       
-        if n == k:
-            memo[n][k][last_element] = 1
-        elif k == 1:
-            memo[n][k][last_element] = 1
-        else:
-            count = 0
-            for i in range (last_element, n // k + 1):
-                count += pi(n-i, k-1, i)
-            memo[n][k][last_element] = count
-    return memo[n][k][last_element]
+
+    # If memo not calculated
+    if memo[n][k][last_element] != 0:
+        return memo[n][k][last_element]
+
+    # Base cases
+    if n == k:
+        memo[n][k][last_element] = 1
+    elif k == 1:
+        memo[n][k][last_element] = 1
+
+    else:
+        # Recursion code from before
+        count = 0
+        for i in range (last_element, n // k + 1):
+            count += pi(n - 1, k - 1, i)
+
+        # Add to memo
+        memo[n][k][last_element] = count
+        return count
 ```
 
 </div>
