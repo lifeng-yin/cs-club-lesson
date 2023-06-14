@@ -274,7 +274,34 @@ def pi(n, k, last_element):
 
 ---
 
+# Efficient ++
+
+<div grid="~ cols-2 gap-4">
+<div>
 # Components
+</div>
+<div>
+
+```py
+memo = [[0] * (n + 1) for _ in range(k + 1)]
+
+def pi(n, k, last_element):
+    if memo[n][k][last_element] == 0:       
+        if n == k:
+            memo[n][k][last_element] = 1
+        elif k == 1:
+            memo[n][k][last_element] = 1
+        else:
+            count = 0
+            for i in range (last_element, n // k + 1):
+                count += pi(n-i, k-1, i)
+            memo[n][k][last_element] = count
+    return memo[n][k][last_element]
+```
+
+</div>
+</div>
+---
 
 <div grid="~ cols-2 gap-4">
 <div>
