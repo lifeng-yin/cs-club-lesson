@@ -223,14 +223,14 @@ def climb(n):
 # Naive Recursion Solution
 
 ```py
-def count_lists(k, n):
+def pi(k, n):
     if n == k:
         return 1
     if n <= 1 or k <= 1:
         return 0
     count = 0
     for i in range(1, n + 1):
-        count += count_lists(k - 1, n - i)
+        count += pi(k - 1, n - i)
     return count
 ```
 
