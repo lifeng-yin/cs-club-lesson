@@ -223,15 +223,15 @@ def climb(n):
 # Naive Recursion Solution
 
 ```py
-def pi(k, n):
-    if n == k:
+def pi(n, k, last_element):
+    if n == k or k == 1:
         return 1
-    if n <= 1 or k <= 1:
-        return 0
+
     count = 0
-    for i in range(1, n + 1):
-        count += pi(k - 1, n - i)
+    for i in range(last_element, n + 1):
+        count += pi(n - 1, k - 1, i)
     return count
+
 ```
 
 ---
