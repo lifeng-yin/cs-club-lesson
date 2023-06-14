@@ -75,24 +75,92 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 ---
 layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
+image: https://64.media.tumblr.com/7ce0050a459e97491f5b17ec71ffef71/406991aa4b86fcc5-ec/s500x750/0438aaf8a261ece536b0a418926d61242c88fc07.jpg
 ---
 
-# Example Problem: Climbing Stairs
+# LeetCode Problem: Climbing Stairs
 
+<p style="margin-top: 16px">How many possible ways can you climb to the top of a staircase with <code>n</code> steps, provided that you can only climb 1 or 2 steps at a time?</p>
 
+Example solution when `n = 4`:
+```py
+[1, 1, 1, 1]
+[2, 1, 1]
+[1, 2, 1]
+[1, 1, 2]
+[2, 2]
+# Therefore, there are 5 solutions
+```
 
-How many possible ways can you climb to the top of a staircase with `n` steps, provided that you can only climb 1 or 2 steps at a time?
-
-#### Example solution when `n = 8`:
-
-`[1, 2, 1, 1, 2, 1, 1]`
-<p style="font-size: 12px">(please don't do this in real life)</p>
+<p style="font-size: 12px">(please don't climb stairs like this in real life)</p>
 
 [^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
 
 
 ---
+
+# Idea of breaking it down
+Instead of solving the big problem all at once, we can split it into smaller steps, which are easier to understand and code. Then, we can combine the results from those steps to get our answer.
+
+1. There is only <u>**1**</u> way to climb 1 step. (obviously)
+2. There are <u>**2**</u> ways to climb 2 steps. We can take two small steps, or take a big step in one go.
+3. Now, we can tackle a 3-step staircase. We can break this down into two scenarios:
+    - Take 1 step, leaving us with 2 steps left. From step 2 → 2 ways to climb 2 steps.
+    - Take 2 steps, leaving us with 1 step left. From step 1 → 1 way to climb 1 step.
+    Therefore, 2 + 1 = <u>**3**</u> ways to climb 3 stairs.
+4. Finally, we can use these steps to solve the 4-step staircase. Again, break it into two scenarios:
+    - Take 1 step, leaving us with 3 steps left. From step 3 → 3 ways to climb 3 steps.
+    - Take 2 steps, leaving us with 2 steps left. From step 2 → 2 ways to climb 2 steps.
+    Therefore, 3 + 2 = <u>**5**</u> ways to climb 4 stairs. 🥳🥳🥳
+---
+
+# Solution using loops
+
+```py 
+def climb(n):
+    # Base cases: If there are 0 or 1 steps, there's only one way to climb.
+    if n == 0 or n == 1:
+        return 1
+
+    # Initialize variables for storing previous and current number of ways to climb
+    prev = 1
+    curr = 1
+
+    # Iterate from 2 steps up to the target number of stairs
+    for _ in range(2, n + 1):
+        # Compute the current number of ways to climb by summing the previous two
+        prev, curr = curr, prev + curr
+
+    # Return the current number of ways to climb
+    return curr
+```
+
+---
+
+# Recursive Solution
+
+<div grid="~ cols-2 gap-4">
+<div>
+Instead, we can use a recursive approach to start from the big problem, down to the base case.
+As shown in the previous problem, `climb(4)` can be broken down into two scenarios:
+    <ul>
+        <li style="margin-top: 16px">If a 1-step is taken, there are 3 steps left → <code>climb(3)</code> ways.</li>
+        &nbsp;&nbsp; - Similarily, this can then be broken down into <code>climb(2)</code> and <code>climb(1)</code>`, which is 2 + 1.
+        <li style="margin-top: 16px">If a 2-step is taken, there are 2 steps left → <code>climb(2)</code> ways, which is 2.</li>
+    </ul>
+    <p style="margin-top: 16px">Therefore, the number of ways is 2 + 1 + 2 = 5.</p>
+</div>
+<div>
+```py
+def climb():
+
+```
+</div>
+</div>
+
+---
+
+But what will happen when 
 
 # Components
 
