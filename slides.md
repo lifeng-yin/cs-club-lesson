@@ -171,7 +171,9 @@ def climb(n):
 
 <div grid="~ cols-2 gap-4">
 <div>
-However, this solution is not efficient.
+However, this solution is not efficient. Why? Since the subproblems are being calculated over and over again. 
+- Take a look at the call stack: see how the subproblems are being calculated more than once?
+- Repeated calculations increase exponentially as `n` becomes larger
 </div>
 <div>
 <img src="/recursioncallstack.png" />
