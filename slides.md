@@ -305,7 +305,7 @@ def pi(n, k, last_element):
 
 <div grid="~ cols-2 gap-4">
 <div>
-### Dynamic Programming
+<h3>Dynamic Programming</h3>
 
 - To avoid recalculating the subproblems (`pi(n - 1, k - 1, i)`), we can utilize Dynamic Programming!
 - Memo is a 2D array that stores the count for each problem.
