@@ -65,23 +65,13 @@ The last comment block of each slide will be treated as slide notes. It will be 
 ### Divide and Conquer
 - Also splits a problem into sub-problems
 - Sub-problems are independent, so no need for storing
-- 
+- Used for different problems
 
+### Greedy Algorithms
+- Divides the problem into steps
+- At each step, chooses the option that is best at the moment without worrying about the future
+- Faster and more efficient, but won't always work
 
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide | 
-| <kbd>down</kbd> | next slide |
-
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
 
 ---
 layout: image-right
