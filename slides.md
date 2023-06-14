@@ -243,7 +243,13 @@ def pi(n, k, last_element):
 
 <div grid="~ cols-2 gap-4">
 <div>
-Here, we 
+Here's one way to make it more efficient, without using Dynamic Programming:
+- Say `n = 20` and `k = 10`.
+- Let's say the first value is `2`, all subsequent values must be `>= 2`.
+- `10 × 2` = 20, so the max value is 2
+- But the code will loop over all of the values greater than 2 (3 to 20).
+
+We can instead put the stop value as n // k + 1. This will make the code stop at the maximum.
 </div>
 <div>
 
