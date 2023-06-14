@@ -1,13 +1,5 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b6bf295b-6162-4fdd-ab21-569605b5d08b/deploy-status)](https://app.netlify.com/sites/cs-dp-lesson/deploys)
 
-[Edit on StackBlitz ⚡️](https://sli.dev/new)
+# CS Club Lesson - Dynamic Programming
 
-To start the slide show:
-
-- `npm install`
-- `npm run dev`
-- visit http://localhost:3030
-
-Edit the [slides.md](./slides.md) to see the changes.
-
-Learn more about Slidev on [documentations](https://sli.dev/).
+🔗 Link: <a href="https://cs-dp-lesson.netlify.app/">https://cs-dp-lesson.netlify.app/</a>
