@@ -346,6 +346,14 @@ def pi(n, k, last_element):
 </div>
 
 ---
+
+# Strategies to solve a DP problem
+- Break the problem down into subproblems, and find the relationship between them.
+- Figure out whether to use recursion or looping.
+- Implement the recursion.
+- Optimize.
+- If needed, use dynamic programming to avoid recalculating subproblems.
+---
 layout: center
 class: text-center
 ---
