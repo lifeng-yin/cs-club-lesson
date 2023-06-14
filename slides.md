@@ -10,6 +10,7 @@ drawings:
 css: unocss
 fonts:
     sans: 'Manrope'
+transition: slide-left
 ---
 
 <h1 class="font-800">DYNAMIC PROGRAMMING</h1>
