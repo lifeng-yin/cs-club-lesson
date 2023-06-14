@@ -157,8 +157,8 @@ def climb(n):
     if n == 1: return 1
     if n == 2: return 2
 
-    # Divide into 2 scenarios and solve recursively:
-    # Taking a 1-step and a 2-step, then sum the results
+    # Taking a 1-step and a 2-step,
+    # then sum the results
     # Eg. climb(4) = climb(3) + climb(2)
     return climbStairsRecursive(n - 1) + climbStairsRecursive(n - 2)
 ```
@@ -167,7 +167,9 @@ def climb(n):
 
 ---
 
-But what will happen when 
+However, this solution is not efficient. 
+
+---
 
 # Components
 
