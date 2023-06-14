@@ -41,33 +41,32 @@ The last comment block of each slide will be treated as slide notes. It will be 
 # Intro
 
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+<p style="margin-top: 20px">How did you hear of dynamic programming? Perhaps you've just heard of it this second, or maybe you saw it on LeetCode, or maybe you're secretly a DP master. Well, let me tell you a secret - the name "Dynamic Programming" is misleading! <b class="font-800" style="opacity: 1">It's actually a problem-solving technique!</b> Here's how it works:</p>
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
+<br>
+
+- 1. Break the big, scary problem down into smaller, less scary, sub-problems.
+- 2. Solve each sub-problem, breaking those down even smaller if you have to.
+- 3. Store the results of each sub-problem after solving.
+- 4. When solving a sub-problem that was solved and stored already, use that.
 
 <br>
 <br>
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
-
+<h4> <b class="font-700">BIG IDEA:</b> <u>Reusing subproblems</u></h4>
 ---
 
-# Navigation
+# Difference between other algorithms
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
+### Brute Force
+- Loop/recur over all possible solutions
+- Often called "naïve approach", simpler but slower
 
-### Keyboard Shortcuts
+### Divide and Conquer
+- Also splits a problem into sub-problems
+- Sub-problems are independent, so no need for storing
+- 
+
 
 |     |     |
 | --- | --- |
